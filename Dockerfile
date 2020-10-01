@@ -2,7 +2,6 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
 COPY *.sln .
-COPY Colors.UnitTests/*.csproj Colors.UnitTests/
 COPY TestProject.Api/*.csproj TestProject.Api/
 RUN dotnet restore
 COPY . .
